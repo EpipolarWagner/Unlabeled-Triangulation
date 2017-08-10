@@ -24,11 +24,11 @@
         twidleB=[[twidleA1';twidleA2'] vecN1 vecN2]
         kerB=null(twidleB);
         vecM=rand(10,1);
-        M1=vecToSymmetricMatrix(vecM)
+        M1=vecToSymmetric4x4Matrix(vecM)
         vecM=rand(10,1);
-        M2=vecToSymmetricMatrix(vecM)
-        M1=vecToSymmetricMatrix(kerB(:,1));
-        M2=vecToSymmetricMatrix(kerB(:,2));
+        M2=vecToSymmetric4x4Matrix(vecM)
+        M1=vecToSymmetric4x4Matrix(kerB(:,1));
+        M2=vecToSymmetric4x4Matrix(kerB(:,2));
         alpha = sym('alpha');
         cubicPoly=sym2poly(det(alpha*M1+(1-alpha)*M2));
         alpha=roots(cubicPoly);
